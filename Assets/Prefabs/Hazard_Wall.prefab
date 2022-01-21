@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 9157610563592360745}
   - component: {fileID: 9157610563592360744}
   m_Layer: 0
-  m_Name: Unsafe_Wall
-  m_TagString: Untagged
+  m_Name: Hazard_Wall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
