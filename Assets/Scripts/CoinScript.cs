@@ -5,15 +5,9 @@ using UnityEngine;
 public class CoinScript : MonoBehaviour
 {
     public float SpinSpeed;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(0, SpinSpeed * Time.deltaTime, 0));
+        transform.Rotate(new Vector3(0, 0, SpinSpeed * Time.deltaTime));
     }
 }
