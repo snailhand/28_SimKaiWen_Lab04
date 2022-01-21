@@ -1,18 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CoinScript : MonoBehaviour
 {
     public float SpinSpeed;
-    public int coinCount;
-    Text coinText;
-
-    private void Start()
-    {
-        coinText = GameObject.Find("ScoreText").GetComponent<Text>();
-    }
 
     void Update()
     {
@@ -23,8 +15,13 @@ public class CoinScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            coinCount++;
-            coinText.text = "Score: " + coinCount.ToString();
+            if(transform.parent.childCount <= 1)
+            {
+                SceneHandler.WinGame();
+            }
+            var player = other.gameObject.GetComponent<PlayerMovement>();
+            player.UpdateScore();
+
             Destroy(this.gameObject);
         }
     }
