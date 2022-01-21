@@ -20,4 +20,12 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movement = new Vector3(moveX, 0, moveY);
         playerRb.AddForce(movement * moveSpeed * Time.deltaTime);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Wall")
+        {
+            SceneHandler.LoseGame();
+        }
+    }
 }

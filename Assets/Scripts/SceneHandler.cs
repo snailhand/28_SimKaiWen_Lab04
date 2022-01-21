@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static void WinGame()
     {
-        
+        SceneManager.LoadScene("GameWinScene");
+    }
+    public static void LoseGame()
+    {
+        SceneManager.LoadScene("GameLoseScene");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeScene(string name)
     {
-        
+        SceneManager.LoadScene(name);
     }
 }
