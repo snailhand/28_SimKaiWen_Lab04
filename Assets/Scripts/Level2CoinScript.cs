@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinScript : MonoBehaviour
+public class Level2CoinScript : MonoBehaviour
 {
     public float SpinSpeed;
 
@@ -15,9 +15,9 @@ public class CoinScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if(transform.parent.childCount <= 1)
+            if (transform.parent.childCount <= 1)
             {
-                SceneHandler.NextLevel();
+                SceneHandler.WinGame();
             }
             var player = other.gameObject.GetComponent<PlayerMovement>();
             player.UpdateScore();

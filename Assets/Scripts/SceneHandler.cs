@@ -13,6 +13,10 @@ public class SceneHandler : MonoBehaviour
     {
         SceneManager.LoadScene("GameLoseScene");
     }
+    public static void NextLevel()
+    {
+        SceneManager.LoadScene("GamePlay_Level_2");
+    }
 
     public void ChangeScene(string name)
     {
